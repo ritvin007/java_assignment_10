@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #666;
+        }
+        input[type="text"], input[type="tel"], select, textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 16px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button[type="reset"] {
+            background-color: #ccc;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Our Departmental Store!</h1>
+    
+    <form id="customerForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Contact Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="days">When do you usually prefer to shop with us?</label>
+        <input type="text" id="days" name="days" placeholder="e.g., Weekends, Afternoons, etc." required>
+
+        <label for="item">What's your favorite item to shop for?</label>
+        <select id="item" name="item" required>
+            <option value="">Choose an option</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Home Decor">Home Decor</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="suggestions">Any suggestions or feedback for us?</label>
+        <textarea id="suggestions" name="suggestions" placeholder="We'd love to hear your thoughts!"></textarea>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+</div>
+
+</body>
+</html>
